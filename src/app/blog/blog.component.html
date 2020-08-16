@@ -1,0 +1,37 @@
+<div class="contenido row ">
+    <div class="posts col-md-6">
+      <div *ngFor="let post of this.Posts">
+        <div class="card mt-2">
+          <img class="card-img-top" [src]="post.imagen" alt="">
+          <div class="card-body">
+            <h2 class="card-title">{{post.titulo}}</h2>
+  
+            <p class="card-text">{{post.texto}}</p>
+          </div>
+          <div class="card-footer text-muted">
+            Por: {{post.autor}} | {{post.fecha | date: "dd/MM/yyyy"}}
+          </div>
+  
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card ">
+        <div class="card-header">
+          <h4 class="card-title">Categorias</h4>
+        </div>
+        <div class="card-body" style="border:0.5px solid black;">
+          <select name="changeCategoria" class="form-control" (change)="buscarCategoria($event)"
+          style="border:2px solid lightsalmon">
+            <option value="todos">Todos los Planes</option>
+            <option value="deporte">Deporte</option>
+            <option value="quedadas">Quedadas</option>
+            <option value="restaurantes">Restaurantes</option>
+            <option value="pubs">Pubs</option>
+            <option value="discotecas">Fiestuqui</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+  

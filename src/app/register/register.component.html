@@ -1,0 +1,19 @@
+<div class="login row justify-content-center">
+    <div class="col-8 align-self-center text-center">
+      <h2>Crear cuenta</h2>
+      <form [formGroup]="formRegister" (ngSubmit)="register()">
+        <div class="form-group">
+          <label>Email:</label>
+          <input type="email" name="email" class="form-control" formControlName="email">
+        </div>
+        <div class="form-group">
+          <label>Pass:</label>
+          <input type="password" name="password" class="form-control" formControlName="password">
+        </div>
+        <button class="btn btn-info btn-block" [disabled]="!formRegister.valid">Entrar</button>
+      </form>
+      <p>Correo(eve.holt@reqres.in)Contraseña(la que quieras)</p>
+  
+    </div>
+  </div>
+  
